@@ -1,37 +1,85 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
+    /* Light gray background */
     margin: 0;
     padding: 0;
 }
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    margin: 50px auto;
+    /* Add some vertical margin for better centering */
+    padding: 30px;
+    background-color: #ffffff;
+    /* White background */
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    text-align: left;
+    /* Align text to the left for better readability */
 }
 
 h1 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
+    color: #333333;
+    /* Dark gray heading */
+    font-size: 32px;
+    margin-bottom: 30px;
+    /* Increased margin for better spacing */
 }
 
 textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    width: calc(100% - 20px);
+    /* Adjusted width to accommodate padding */
+    padding: 15px;
+    font-size: 16px;
+    /* Slightly reduced font size for better readability */
+    border: 2px solid #dddddd;
+    /* Light gray border */
+    border-radius: 8px;
     resize: vertical;
     min-height: 200px;
+    outline: none;
+    /* Remove default focus outline */
 }
 
 textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    border-color: #4d94ff;
+    /* Blue border color when focused */
+    box-shadow: 0px 0px 10px rgba(77, 148, 255, 0.3);
+    /* Soft blue shadow when focused */
+}
+
+/* Add hover effect to the textarea */
+textarea:hover {
+    border-color: #bbbbbb;
+    /* Lighter gray border on hover */
+}
+
+/* Style placeholder text */
+textarea::placeholder {
+    color: #999999;
+    /* Light gray placeholder text */
+}
+
+/* Add some animation on focus */
+textarea:focus,
+textarea:hover {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style scrollbar */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    /* Light gray scrollbar */
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #aaaaaa;
+    /* Darker gray on hover */
 }
